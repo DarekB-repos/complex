@@ -3,7 +3,7 @@ services:
  - docker
 
 before_install:
- - docekr build -t testrectdock -f ./client/Dockerfile.dev ./client
+ - docker build -t testrectdock -f ./client/Dockerfile.dev ./client
 
 script:
  - docker run testreactdock npm test -- --coverage
